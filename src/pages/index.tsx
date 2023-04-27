@@ -22,10 +22,7 @@ const Home: NextPage<Props> = ({ allPosts }) => {
       </Head>
 
       <main className="
-        w-full
-        container
-        border
-        border-green-800"
+        w-full"
       >
         <h1 className="
           mt-0
@@ -43,8 +40,8 @@ const Home: NextPage<Props> = ({ allPosts }) => {
         <div className="
           grid
           grid-cols-5
-          gap-4
-          text-black
+          gap-1
+          text-gray-500
           font-bold
           bg-gray-300"
         >
