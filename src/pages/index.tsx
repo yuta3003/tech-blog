@@ -13,7 +13,6 @@ export const getStaticProps = async () => {
 
 const Home: NextPage<Props> = ({ allPosts }) => {
   return (
-    // <div className={styles.container}>
     <div>
       <Head>
         <title>Hello world!</title>
@@ -21,15 +20,11 @@ const Home: NextPage<Props> = ({ allPosts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <main className={styles.main}> */}
       <main className="w-full bg-red-200">
-        {/* <h1 className={styles.title}>記事一覧</h1> */}
         <h1>記事一覧</h1>
 
-        {/* <div className={styles.grid}> */}
         <div className="grid grid-cols-3 gap-4 text-black font-bold">
           {allPosts.map((post) => (
-            // <a href={post.slug} className={styles.card} key={post.slug}>
             <a href={post.slug} className="
               block max-w-sm p-6 bg-white border
               border-gray-200 rounded-lg shadow
@@ -43,7 +38,6 @@ const Home: NextPage<Props> = ({ allPosts }) => {
           ))}
         </div>
       </main>
-      {/* <footer className={styles.footer}> */}
       <footer>
         <p>Powered by Next.js.</p>
       </footer>
