@@ -38,8 +38,11 @@ const Home: NextPage<Props> = ({ allPosts }) => {
         </h1>
 
         <div className="
+          mt-20
+          ml-36
+          mr-36
           grid
-          grid-cols-5
+          grid-cols-4
           gap-1
           text-gray-500
           font-bold
@@ -76,10 +79,10 @@ const Home: NextPage<Props> = ({ allPosts }) => {
         </div>
       </main>
       <footer className="
-        absolute
-        bottom-0
-        bg-gray-100
-      ">
+        px-5
+        py-3"
+      >
+        footer
       </footer>
     </div>
   );
