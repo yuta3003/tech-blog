@@ -14,7 +14,11 @@ export const getStaticProps = async () => {
 
 const Home: NextPage<Props> = ({ allPosts }) => {
   return (
-    <div>
+    <div
+      className="
+        bg-gray-200
+      "
+    >
       <Head>
         <title>Hello world!</title>
         <meta
@@ -30,6 +34,7 @@ const Home: NextPage<Props> = ({ allPosts }) => {
       <main
         className="
           w-full
+          bg-indigo-200
         "
       >
         <h1
@@ -41,7 +46,7 @@ const Home: NextPage<Props> = ({ allPosts }) => {
             font-medium
             text-primary
             text-gray-400
-            bg-gray-100
+            bg-gray-200
           "
         >
           404 motivation not found
@@ -92,9 +97,6 @@ const Home: NextPage<Props> = ({ allPosts }) => {
                 rounded-lg
                 shadow
                 hover:bg-gray-100
-                dark:bg-gray-800
-                dark:border-gray-700
-                dark:hover:bg-gray-700
               "
               key={post.slug}
             >
@@ -141,7 +143,6 @@ const Home: NextPage<Props> = ({ allPosts }) => {
           rounded-lg
           shadow
           m-4
-          dark:bg-gray-800
         "
       >
         <div
@@ -161,7 +162,6 @@ const Home: NextPage<Props> = ({ allPosts }) => {
               text-sm
               text-gray-500
               sm:text-center
-              dark:text-gray-400
             "
           >
             404 motivation not found
@@ -175,7 +175,6 @@ const Home: NextPage<Props> = ({ allPosts }) => {
               text-sm
               font-medium
               text-gray-500
-              dark:text-gray-400
               sm:mt-0
             "
           >
