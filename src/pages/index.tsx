@@ -119,7 +119,8 @@ const Home: NextPage<Props> = ({ allPosts }) => {
                   className="
                     font-bold
                     text-xl
-                    mb-2"
+                    mb-2
+                  "
                 >
                   {post.title}
                 </div>
@@ -131,31 +132,34 @@ const Home: NextPage<Props> = ({ allPosts }) => {
                 >
                   {post.date}
                 </p>
-                <span
-                  className="
-                    inline-flex
-                    items-center
-                    gap-1.5
-                    py-1.5
-                    px-3
-                    rounded-full
-                    text-xs
-                    font-medium
-                    bg-blue-100
-                    text-blue-800
-                  "
-                >
+                {post.tags.map(tag => (
                   <span
                     className="
-                      w-1.5
-                      h-1.5
-                      inline-block
-                      bg-indigo-400
+                      inline-flex
+                      items-center
+                      gap-1.5
+                      py-1.5
+                      px-3
                       rounded-full
+                      text-xs
+                      font-medium
+                      bg-blue-100
+                      text-blue-800
                     "
-                  />
-                  {post.tags}
-                </span>
+                    key={tag}
+                  >
+                    <span
+                      className="
+                        w-1.5
+                        h-1.5
+                        inline-block
+                        bg-indigo-400
+                        rounded-full
+                      "
+                    />
+                    {tag}
+                  </span>
+                ))}
               </div>
             </a>
           ))}
