@@ -2,6 +2,8 @@ import type { InferGetStaticPropsType, NextPage } from "next";
 import Head from "next/head";
 import { getAllPosts } from "../lib/api";
 import Image from 'next/image';
+import Link from "next/link";
+import Layout from "../components/layout/layout"
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -77,7 +79,7 @@ const Home: NextPage<Props> = ({ allPosts }) => {
           "
         >
           {allPosts.map((post) => (
-            <a
+            <Link
               href={post.slug}
               className="
                 h-auto
@@ -161,7 +163,7 @@ const Home: NextPage<Props> = ({ allPosts }) => {
                   </span>
                 ))}
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </main>
@@ -257,7 +259,6 @@ const Home: NextPage<Props> = ({ allPosts }) => {
           </ul>
         </div>
       </footer>
-
     </div>
   );
 };
