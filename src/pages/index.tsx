@@ -123,15 +123,40 @@ const Home: NextPage<Props> = ({ allPosts }) => {
                 >
                   {post.title}
                 </div>
-                  <p
+                <p
+                  className="
+                    text-gray-400
+                    text-base
+                  "
+                >
+                  {post.date}
+                </p>
+                <span
+                  className="
+                    inline-flex
+                    items-center
+                    gap-1.5
+                    py-1.5
+                    px-3
+                    rounded-full
+                    text-xs
+                    font-medium
+                    bg-blue-100
+                    text-blue-800
+                  "
+                >
+                  <span
                     className="
-                      text-gray-400
-                      text-base
+                      w-1.5
+                      h-1.5
+                      inline-block
+                      bg-indigo-400
+                      rounded-full
                     "
-                  >
-                    {post.date}
-                  </p>
-                </div>
+                  />
+                  {post.tags}
+                </span>
+              </div>
             </a>
           ))}
         </div>
