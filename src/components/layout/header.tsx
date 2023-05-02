@@ -1,11 +1,16 @@
 import React from "react";
+import Link from 'next/link'
 
 const Header = () => {
   return (
-    <div className="bg-gray-200">
-      <h1
+    <div
+      className="
+        bg-gray-200
+      "
+    >
+      <Link
+        href="/"
         className="
-          mt-0
           px-10
           py-5
           text-4xl
@@ -16,7 +21,7 @@ const Header = () => {
         "
       >
         404 motivation not found
-      </h1>
+      </Link>
     </div>
   );
 };
