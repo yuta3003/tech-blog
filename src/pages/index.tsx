@@ -36,7 +36,6 @@ const Home: NextPage<Props> = ({ allPosts }) => {
           md:grid-cols-3
           lg:grid-cols-4
           gap-1
-          text-gray-500
           font-bold
         "
       >
@@ -84,6 +83,7 @@ const Home: NextPage<Props> = ({ allPosts }) => {
                   font-bold
                   text-xl
                   mb-2
+                  text-gray-500
                 "
               >
                 {post.title}
