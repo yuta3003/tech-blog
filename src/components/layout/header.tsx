@@ -19,6 +19,7 @@ const Header = () => {
             text-primary
             text-gray-400
             bg-gray-200
+            hover:text-gray-500
           "
         >
           404 motivation not found
