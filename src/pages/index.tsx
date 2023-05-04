@@ -18,23 +18,17 @@ const Home: NextPage<Props> = ({ allPosts }) => {
     <Layout>
       <div
         className="
-          mt-10
-          ml-10
-          mr-10
-          sm:mt-20
-          sm:ml-10
-          sm:mr-10
-          md:mt-20
-          md:ml-20
-          md:mr-20
-          lg:mt-20
-          lg:ml-30
-          lg:mr-30
+          mt-10    ml-10    mr-10
+          sm:mt-20 sm:ml-10 sm:mr-10
+          md:mt-20 md:ml-20 md:mr-20
+          lg:mt-20 lg:ml-30 lg:mr-30
+
           grid
           grid-cols-1
           sm:grid-cols-2
           md:grid-cols-3
           lg:grid-cols-4
+
           gap-1
           font-bold
         "

@@ -30,14 +30,13 @@ const Layout = ({children}: Props) => {
         <header>
           <Header />
         </header>
-        <main
+        <div
           className="
             w-full
-            bg-indigo-200
           "
         >
           {children}
-        </main>
+        </div>
         <footer>
           <Footer />
         </footer>
