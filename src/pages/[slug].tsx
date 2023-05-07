@@ -58,7 +58,7 @@ const Post: NextPage<Props> = ({ post }) => {
         "
       >
         <article>
-          <Image
+          <img
             className="
               mt-6
               rounded-lg

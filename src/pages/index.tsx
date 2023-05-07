@@ -57,7 +57,7 @@ const Home: NextPage<Props> = ({ allPosts }) => {
             "
             key={post.slug}
           >
-            <Image
+            <img
               className="
                 w-full
               "
