@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 type Post = {
   slug: string;
@@ -10,7 +10,7 @@ type Post = {
   tags: string[];
 };
 
-const postsDirectory = path.join(process.cwd(), "content");
+const postsDirectory = path.join(process.cwd(), 'content');
 
 /**
  * postsDirectory 以下のディレクトリ名を取得する
@@ -26,29 +26,29 @@ export function getPostSlugs() {
  * 指定したフィールド名から、記事のフィールドの値を取得する
  */
 export function getPostBySlug(slug: string, fields: string[] = []) {
-  const fullPath = path.join(postsDirectory, slug, "index.md");
-  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const fullPath = path.join(postsDirectory, slug, 'index.md');
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
   const items: Post = {
-    slug: "",
-    content: "",
-    title: "",
-    date: "",
+    slug: '',
+    content: '',
+    title: '',
+    date: '',
     tags: [],
   };
 
   fields.forEach((field) => {
-    if (field === "slug") {
+    if (field === 'slug') {
       items[field] = slug;
     }
-    if (field === "content") {
+    if (field === 'content') {
       items[field] = content;
     }
     if (
-      field === "title"||
-      field === "date" ||
-      field === "tags") {
+      field === 'title'||
+      field === 'date' ||
+      field === 'tags') {
         items[field] = data[field];
     }
   });

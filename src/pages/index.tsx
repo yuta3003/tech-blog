@@ -1,13 +1,13 @@
-import type { InferGetStaticPropsType, NextPage } from "next";
-import { getAllPosts } from "../lib/api";
-import Image from 'next/image';
-import Link from "next/link";
-import Layout from "../components/layout/layout"
+import type { InferGetStaticPropsType, NextPage } from 'next';
+import { getAllPosts } from '../lib/api';
+import Link from 'next/link';
+
+import Layout from '../components/layout/layout'
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(["slug", "title", "date", "tags"]);
+  const allPosts = getAllPosts(['slug', 'title', 'date', 'tags']);
   return {
     props: { allPosts },
   };
@@ -17,7 +17,7 @@ const Home: NextPage<Props> = ({ allPosts }) => {
   return (
     <Layout>
       <div
-        className="
+        className='
           mt-10    ml-10    mr-10
           sm:mt-20 sm:ml-10 sm:mr-10
           md:mt-20 md:ml-20 md:mr-20
@@ -31,12 +31,12 @@ const Home: NextPage<Props> = ({ allPosts }) => {
 
           gap-1
           font-bold
-        "
+        '
       >
         {allPosts.map((post) => (
           <Link
             href={post.slug}
-            className="
+            className='
               h-auto
               max-w-sm
               rounded-lg
@@ -54,45 +54,45 @@ const Home: NextPage<Props> = ({ allPosts }) => {
               rounded-lg
               shadow
               hover:bg-gray-100
-            "
+            '
             key={post.slug}
           >
             <img
-              className="
+              className='
                 w-full
-              "
-              src="/images/thumbnail/typescript-logo.png"
-              alt="thumbnail"
+              '
+              src='/images/thumbnail/typescript-logo.png'
+              alt='thumbnail'
               width={512}
               height={512}
             />
             <div
-              className="
+              className='
                 px-6
                 py-4
-              "
+              '
             >
               <div
-                className="
+                className='
                   font-bold
                   text-xl
                   mb-2
                   text-gray-500
-                "
+                '
               >
                 {post.title}
               </div>
               <p
-                className="
+                className='
                   text-gray-400
                   text-base
-                "
+                '
               >
                 {post.date}
               </p>
               {post.tags.map(tag => (
                 <span
-                  className="
+                  className='
                     inline-flex
                     items-center
                     gap-1.5
@@ -103,17 +103,17 @@ const Home: NextPage<Props> = ({ allPosts }) => {
                     font-medium
                     bg-blue-100
                     text-blue-800
-                  "
+                  '
                   key={tag}
                 >
                   <span
-                    className="
+                    className='
                       w-1.5
                       h-1.5
                       inline-block
                       bg-indigo-400
                       rounded-full
-                    "
+                    '
                   />
                   {tag}
                 </span>

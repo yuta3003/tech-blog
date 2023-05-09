@@ -1,5 +1,5 @@
-import { remark } from "remark";
-import html from "remark-html";
+import { remark } from 'remark';
+import html from 'remark-html';
 
 /**
  * Markdown を解析して HTML にして返す
