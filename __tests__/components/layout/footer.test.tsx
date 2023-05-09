@@ -6,7 +6,9 @@ import { render, screen } from '@testing-library/react';
 
 import Footer from '../../../src/components/layout/footer';
 
-test('changes the class when hovered', () => {
-	render(<Footer />);
-  screen.debug();
+describe('Footer', () => {
+  test('リストアイテムの数', () => {
+	  render(<Footer />);
+    // screen.debug();
+  });
 });

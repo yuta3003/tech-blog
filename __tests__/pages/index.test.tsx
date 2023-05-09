@@ -4,17 +4,11 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 
-import Layout from '../../../src/components/layout/layout';
+import Home from '../../src/pages/index';
 
-
-describe('Layout', () => {
+describe('Home', () => {
   test('changes the class when hovered', () => {
-	  render(
-      <Layout>
-        <div>
-        </div>
-      </Layout>
-    );
+	  render(<Home allPosts={[]} />);
     // screen.debug();
   });
 });
