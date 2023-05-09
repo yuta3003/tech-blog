@@ -1,11 +1,10 @@
-import { NextPage, InferGetStaticPropsType } from "next";
-import { useRouter } from "next/router";
-import ErrorPage from "next/error";
-import { getAllPosts, getPostBySlug } from "../lib/api";
-import markdownToHtml from "../lib/markdownToHtml";
-import React from "react";
-import Image from 'next/image'
-import Layout from "../components/layout/layout"
+import { NextPage, InferGetStaticPropsType } from 'next';
+import { useRouter } from 'next/router';
+import ErrorPage from 'next/error';
+import { getAllPosts, getPostBySlug } from '../lib/api';
+import markdownToHtml from '../lib/markdownToHtml';
+import React from 'react';
+import Layout from '../components/layout/layout'
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -13,7 +12,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
  * 記事のパスを取得する
  */
 export const getStaticPaths = async () => {
-  const posts = getAllPosts(["slug"]);
+  const posts = getAllPosts(['slug']);
   return {
     paths: posts.map((post) => {
       return {
@@ -30,7 +29,7 @@ export const getStaticPaths = async () => {
  * 記事の内容を取得する
  */
 export const getStaticProps = async ({ params }: any) => {
-  const post = getPostBySlug(params.slug, ["slug", "title", "date", "content"]);
+  const post = getPostBySlug(params.slug, ['slug', 'title', 'date', 'content']);
   // Markdown を HTML に変換する
   const content = await markdownToHtml(post.content);
   // content を詰め直して返す
@@ -52,24 +51,24 @@ const Post: NextPage<Props> = ({ post }) => {
   return (
     <Layout>
       <main
-        className="
+        className='
           flex
           justify-center
-        "
+        '
       >
         <article>
           <img
-            className="
+            className='
               mt-6
               rounded-lg
               shadow-xl
-            "
-            src="/images/thumbnail/apple-logo.jpg"
-            alt="Apple Logo"
+            '
+            src='/images/thumbnail/apple-logo.jpg'
+            alt='Apple Logo'
             width={512}
             height={512}
           />
-          <h1 className="
+          <h1 className='
             w-full
             mt-0
             px-0
@@ -78,22 +77,22 @@ const Post: NextPage<Props> = ({ post }) => {
             font-medium
             text-primary
             text-gray-500
-            bg-gray-100"
+            bg-gray-100'
           >
             {post.title}
           </h1>
-          <div className="
-            grid"
+          <div className='
+            grid'
           >
             <div>
-              <p className="
+              <p className='
                 font-medium
-                text-gray-400"
+                text-gray-400'
               >
                 {post.date}
               </p>
               <div
-                className="
+                className='
                   [&>h1]:text-4xl
                   [&>h1]:font-medium
                   [&>h1]:text-gray-500
@@ -106,14 +105,14 @@ const Post: NextPage<Props> = ({ post }) => {
                   [&>p]:text-xl
                   [&>p]:font-medium
                   [&>p]:text-gray-500
-                "
+                '
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
             </div>
           </div>
         </article>
       </main>
-      <footer className="">
+      <footer className=''>
         <p>Powered by Next.js.</p>
       </footer>
     </Layout>
