@@ -15,6 +15,6 @@ describe('Layout', () => {
         </div>
       </Layout>
     );
-    screen.debug();
+    // screen.debug();
   });
 });

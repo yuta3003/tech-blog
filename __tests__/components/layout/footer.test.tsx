@@ -9,6 +9,6 @@ import Footer from '../../../src/components/layout/footer';
 describe('Footer', () => {
   test('リストアイテムの数', () => {
 	  render(<Footer />);
-    screen.debug();
+    // screen.debug();
   });
 });

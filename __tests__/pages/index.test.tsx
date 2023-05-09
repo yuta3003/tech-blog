@@ -9,6 +9,6 @@ import Home from '../../src/pages/index';
 describe('Home', () => {
   test('changes the class when hovered', () => {
 	  render(<Home allPosts={[]} />);
-    screen.debug();
+    // screen.debug();
   });
 });
