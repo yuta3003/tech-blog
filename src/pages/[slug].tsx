@@ -1,9 +1,10 @@
+import React from 'react';
 import { NextPage, InferGetStaticPropsType } from 'next';
-import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
+import { useRouter } from 'next/router';
+
 import { getAllPosts, getPostBySlug } from '../lib/api';
 import markdownToHtml from '../lib/markdownToHtml';
-import React from 'react';
 import Layout from '../components/layout/layout'
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
