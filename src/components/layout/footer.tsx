@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -22,7 +23,8 @@ const Footer = () => {
             md:justify-between
           '
         >
-          <span
+          <Link
+            href='/'
             className='
               ml-5
               text-sm
@@ -31,7 +33,7 @@ const Footer = () => {
             '
           >
             404 motivation not found
-          </span>
+          </Link>
           <ul
             className='
               flex
