@@ -112,9 +112,6 @@ const Post: NextPage<Props> = ({ post }) => {
           </div>
         </article>
       </main>
-      <footer className=''>
-        <p>Powered by Next.js.</p>
-      </footer>
     </Layout>
   );
 };
